@@ -19,9 +19,6 @@ pipeline {
         }
     }
     post {
-        always {
-            junit 'reports/*.xml'
-        }
         success {
             script {
                 if (env.BRANCH_NAME == 'master') {
