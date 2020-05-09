@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('clean') {
             steps {
-                sh 'npm run clean'
                 sh 'npm cache clean --force'
             }
         }
