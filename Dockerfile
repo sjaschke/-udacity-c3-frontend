@@ -9,9 +9,11 @@ COPY package*.json ./
 RUN npm ci
 # Bundle app source
 COPY . .
+RUN rm -rf www
+
 RUN ionic build
 
-## Run 
+## Run
 FROM nginx:alpine
 #COPY www /usr/share/nginx/html
 COPY --from=ionic  /usr/src/app/www /usr/share/nginx/html
