@@ -17,7 +17,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'npm run buildProd'
+                sh 'npm run build'
             }
         }
     }
